@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  background-color: black;
+}
+img{
+  width: 30%;
+  height: 100vh;
+}
+
+.wrapper{
+  width: 50vw;
+  height: 60vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+h1{
+  font-size: 40px;
+  color: maroon;
+  margin: 40px 0;
+  text-shadow: 1px 1px 5px black;
+}
+p{
+  text-shadow: 1px 1px 5px maroon;
+}
+
+button{
+  width: 150px;
+  height: 40px;
+  border: 1px solid maroon;
+  border-radius: 5px;
+  background-color: maroon;
+  cursor: pointer;
+  color: white;
+  margin: 30px 0;
+  box-shadow: 1px 1px 5px black;
+  transition: .3s ease;
+}
+button:hover{
+  transform: scale(1.1);
+
+}
