@@ -6,6 +6,7 @@ import {uploadFile} from './services/api';
 function App() {
 
   const [file,setFile]=useState('');
+  const [result,setResult]=useState('');
 
   console.log(file);
 
@@ -18,11 +19,12 @@ function App() {
         data.append("fileName",file.name);
         data.append("file",file);
 
-       let response= await uploadFile(data); 
-       console.log(response);
+       let response= await uploadFile(data);
+       console.log(response.path);
+       setResult(response.path);
        }
-       getImage();
     }
+    getImage();
   },[file]);
 
   const onUploadClick=()=>{
@@ -37,6 +39,8 @@ function App() {
         <p>Upload and Share The Download Link</p>
         <button onClick={onUploadClick}>Upload</button>
         <input type="file" ref={fileInputRef} style={{display:'none'}}  onChange={(e)=>setFile(e.target.files[0])}/>
+
+        <a href={result} target='_blank'>{result}</a>
         </div>
     </div>
   );

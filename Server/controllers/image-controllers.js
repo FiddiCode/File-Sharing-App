@@ -8,9 +8,9 @@ const uploadImage=async (req,res)=>{
 
     try {
     const file=await File.create(fileObj);
-    res.status(201).json({path:`http://localhost:8000/file/${file_id}`})
+    res.status(201).json({path:`http://localhost:8000/file/${file._id}`})
  } catch (error) {
-    console.log(error.message);
+    console.log(error);
     res.status(500).json({error:error.message})
     
  }
@@ -18,7 +18,7 @@ const uploadImage=async (req,res)=>{
 
 const downloadImage=async (req,res)=>{
     try {
-        const file=await File.findById(req.params);
+        const file=await File.findById(req.params.fileId);
 
         file.downloadContent++;
 
@@ -26,8 +26,8 @@ const downloadImage=async (req,res)=>{
 
         res.download(file.path,file.name);
     } catch (error) {
-        console.error(error.message);
-        res.status(500).json({error:error.message});
+        console.error(error);
+        res.status(500).json({error:error.message}); 
         
     }
 }
