@@ -35,7 +35,7 @@ function App() {
     <div className="container">
       <img src={banner} alt="banner" />
       <div className="wrapper">
-        <h1>Simple File Sharing</h1>
+        <h1>FidShare</h1>
         <p>Upload and Share The Download Link</p>
         <button onClick={onUploadClick}>Upload</button>
         <input type="file" ref={fileInputRef} style={{display:'none'}}  onChange={(e)=>setFile(e.target.files[0])}/>
