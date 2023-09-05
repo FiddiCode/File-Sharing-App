@@ -6,7 +6,7 @@ const uploadImage=async (req,res)=>{
         name:req.file.originalname
     }
 
-    const Path=process.env.PATH;
+    const Path=process.env.SERVER;
 
     try {
     const file=await File.create(fileObj);
@@ -15,7 +15,7 @@ const uploadImage=async (req,res)=>{
     console.log(error);
     res.status(500).json({error:error.message})
     
- } 
+ }
 }
 
 const downloadImage=async (req,res)=>{

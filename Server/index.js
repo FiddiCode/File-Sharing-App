@@ -6,7 +6,7 @@ import DBConnection from './database/db.js'
 
 const app=express();
 dotenv.config();
-const PORT=process.env.PORT || 8000
+const PORT=process.env.PORT || 8000;
 
 
 app.use(cors());

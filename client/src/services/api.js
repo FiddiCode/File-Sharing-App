@@ -1,12 +1,13 @@
 import axios from 'axios';
 
-const apiUrl='https://fidshare-server.vercel.app';
+const apiURL=process.env.REACT_APP_SERV;
+
 
 export const uploadFile= async (data)=>{
     try {
-
-      let response=await axios.post(`${process.env.SERVER}/upload`,data);
-      console.log(response.data); 
+      console.log(apiURL);
+      let response=await axios.post(`${apiURL}/upload`,data);
+      console.log(response.data);  
       return response.data;
       
         

@@ -20,7 +20,8 @@ function App() {
         data.append("file",file);
 
        let response= await uploadFile(data);
-       console.log(response.path);
+       console.log('response',response);
+       console.log('path',response.path);
        setResult(response.path);
        }
     }
@@ -40,7 +41,7 @@ function App() {
         <button onClick={onUploadClick}>Upload</button>
         <input type="file" ref={fileInputRef} style={{display:'none'}}  onChange={(e)=>setFile(e.target.files[0])}/>
 
-        <a href={result} target='_blank'>{result}</a>
+        <a href={result} target='_blank' rel="noreferrer">{result}</a>
         </div>
     </div>
   );

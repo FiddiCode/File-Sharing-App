@@ -14,7 +14,6 @@ const fileSchema=mongoose.Schema({
         required:true,
         default:0
     }
-
 })
 
 const File=mongoose.model('file',fileSchema);
