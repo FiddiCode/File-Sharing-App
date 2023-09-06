@@ -40,8 +40,9 @@ function App() {
         <p>Upload and Share The Download Link</p>
         <button onClick={onUploadClick}>Upload</button>
         <input type="file" ref={fileInputRef} style={{display:'none'}}  onChange={(e)=>setFile(e.target.files[0])}/>
-
-        <a href={result} target='_blank' rel="noreferrer">{result}</a>
+          <div className='link'>
+          <a href={result} target='_blank' rel="noreferrer">{result ? result :'Link will appear here'}</a>
+        </div>
         </div>
     </div>
   );

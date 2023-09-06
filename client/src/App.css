@@ -21,6 +21,8 @@ img{
   flex-direction: column;
   align-items: center;
   margin: auto;
+  box-shadow: 1px 1px 15px 5px maroon;
+  border-radius: 5px;
 }
 
 h1{
@@ -49,10 +51,21 @@ button:hover{
   transform: scale(1.1);
 }
 
+.link{
+   width: 40vw;
+   height: 10vh;
+   background-color: gray;
+   text-align: center;
+   justify-content: center;
+   word-break: break-all;
+   padding: 5px;
+   box-shadow: 1px 1px 15px 5px black;
+
+}
+
 a{
   text-decoration: none;
   color: maroon;
-  text-align: center;
   text-shadow:1px 1px 5px black;
 }
 
@@ -67,11 +80,16 @@ a{
   .wrapper{
        width: 90vw;
        height: 50vh;
-
+       box-shadow: 1px 1px 15px 5px black;
   }
 
   img{
     width: 0%;
     height: 0%;
+  }
+
+  .link{
+    width: 80vw;
+    box-shadow: 1px 1px 15px 5px black;
   }
 }
