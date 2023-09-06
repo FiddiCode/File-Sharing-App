@@ -49,3 +49,23 @@ button:hover{
   transform: scale(1.1);
 
 }
+
+@media (max-width:500px) {
+
+  .container{
+    background-image: url(banner.jpg);
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .wrapper{
+       width: 90vw;
+       height: 50vh;
+
+  }
+
+  img{
+    width: 0%;
+    height: 0%;
+  }
+}
